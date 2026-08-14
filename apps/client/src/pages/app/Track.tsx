@@ -98,10 +98,10 @@ export default function Track() {
         <SectionTitle title="Cycle insights" />
         <div className="insight-list health-card">
           <div className="insight-row">
-            <span className="insight-icon mint"><Egg size={20} className="lucide lucide-egg mt-2.5 mb-2.5" /></span>
+            <span className="insight-icon mint"style={{ marginLeft: '3px' }}><Egg size={20} className="lucide lucide-egg mt-2.5 mb-2.5" /></span>
             <div>
               <strong>Ovulation predicted</strong>
-              <span>September 8 · in 19 days</span>
+              <span>August 11 · in 9 days</span>
             </div>
             <ChevronRight size={18} />
           </div>
