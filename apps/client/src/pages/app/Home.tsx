@@ -86,13 +86,13 @@ export default function Home() {
             <CalendarDays size={21} />
             <div className="date-tile">
               <span>AUG</span>
-              <strong>14</strong>
+              <strong>25</strong>
             </div>
           </div>
           <div className="period-copy">
             <span>Estimated in</span>
             <strong>5 days</strong>
-            <small>Period window · Aug 14–18</small>
+            <small>Period window · Aug 25–29</small>
           </div>
           <span className="prepare-button">
             Prepare now
