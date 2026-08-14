@@ -1,14 +1,18 @@
 import { useMemo, useState } from "react";
 import { Activity, BellRing, ChevronLeft, ChevronRight, Droplets, Egg, History, Plus, Sparkles } from "lucide-react";
 import { SectionTitle, Toggle } from "@/components/app/Ui";
+
 const weekdays = ["M", "T", "W", "T", "F", "S", "S"];
+// 8월 1일이 토요일에 오도록 index - 4 로 오프셋 조정 및 31일까지 보이도록 42칸으로 확장
 const calendarDays = Array.from({
-  length: 35
-}, (_, index) => index - 2);
+  length: 42
+}, (_, index) => index - 4);
+
 export default function Track() {
   const [selectedDay, setSelectedDay] = useState(20);
   const [reminders, setReminders] = useState(true);
-  const dayLabel = useMemo(() => selectedDay === 20 ? "Today, August 20" : `August ${selectedDay}`, [selectedDay]);
+  const dayLabel = useMemo(() => selectedDay === 20 ? "Today, Thursday, August 20" : `August ${selectedDay}`, [selectedDay]);
+  
   return <div className="page-stack track-page">
       <section className="cycle-summary">
         <div className="cycle-ring">
@@ -47,13 +51,15 @@ export default function Track() {
         </div>
         <div className="calendar-grid">
           {calendarDays.map((day, index) => {
-          const isPeriod = day >= 14 && day <= 18;
-          const isFertile = day >= 24 && day <= 29;
+          // 20일 기준 5일 뒤인 25일부터 생리 시작으로 계산
+          const isPeriod = day >= 25 && day <= 29;
+          // 생리 시작일 14일 전인 11일을 배란일로 계산하여 가임기 설정
+          const isFertile = day >= 6 && day <= 11;
           const isOutside = day < 1 || day > 31;
           const isSelected = day === selectedDay;
           return <button key={`${day}-${index}`} disabled={isOutside} className={["calendar-day", isPeriod ? "period-window" : "", isFertile ? "fertile-window" : "", isSelected ? "selected" : ""].join(" ")} onClick={() => setSelectedDay(day)}>
                 {isOutside ? "" : day}
-                {day === 27 ? <span className="ovulation-dot" /> : null}
+                {day === 11 ? <span className="ovulation-dot" /> : null}
               </button>;
         })}
         </div>
@@ -95,7 +101,7 @@ export default function Track() {
             <span className="insight-icon mint"><Egg size={20} className="lucide lucide-egg mt-2.5 mb-2.5" /></span>
             <div>
               <strong>Ovulation predicted</strong>
-              <span>August 27 · in 18 days</span>
+              <span>September 8 · in 19 days</span>
             </div>
             <ChevronRight size={18} />
           </div>
