@@ -96,8 +96,7 @@ export default function Learn() {
       {/* 새롭게 교체된 Community Talk 섹션 */}
       <section>
         <SectionTitle title="Community talk" action="Enter" />
-        <div className="community-board health-card" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          
+        <div className="community-board health-card" style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '20px' }}> 
           <article className="community-post">
             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#666', marginBottom: '4px' }}>
               <span className="article-category">Symptoms</span>
@@ -133,26 +132,6 @@ export default function Learn() {
               </span>
               <span style={{ color: '#aaa' }}>·</span>
               <span style={{ color: '#888' }}>by eco_friendly99</span>
-            </div>
-          </article>
-
-          <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '0' }} />
-
-          <article className="community-post">
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#666', marginBottom: '4px' }}>
-              <span className="article-category">Diet & Cravings</span>
-              <span>1d ago</span>
-            </div>
-            <h4 style={{ margin: '4px 0', fontSize: '15px' }}>Best teas for bloating? I feel like a balloon today 🎈</h4>
-            <p style={{ margin: '0 0 8px', fontSize: '13px', color: '#555', lineHeight: '1.4' }}>
-              Peppermint usually works for me, but it's not cutting it this cycle. Any secret recipes?
-            </p>
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', fontSize: '12px', fontWeight: '500' }}>
-              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#888' }}>
-                <MessageCircle size={14} /> 8 replies
-              </span>
-              <span style={{ color: '#aaa' }}>·</span>
-              <span style={{ color: '#888' }}>by matchamaker</span>
             </div>
           </article>
           
