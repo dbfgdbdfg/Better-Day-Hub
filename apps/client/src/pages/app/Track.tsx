@@ -106,7 +106,7 @@ export default function Track() {
             <ChevronRight size={18} />
           </div>
           <div className="insight-row">
-            <span className="insight-icon lilac"><History size={20} className="lucide lucide-history mt-2.5 mb-2.5" /></span>
+            <span className="insight-icon lilac"><History size={20} className="lucide lucide-history mt-2.5 mb-2.5 ml-2.5" /></span>
             <div>
               <strong>Cycle history</strong>
               <span>Average cycle: 28 days</span>
@@ -114,7 +114,7 @@ export default function Track() {
             <ChevronRight size={18} />
           </div>
           <div className="insight-row pr-3.5 pl-3.5">
-            <span className="insight-icon teal"><BellRing size={20} className="lucide lucide-bell-ring mt-2.5 mb-2.5" /></span>
+            <span className="insight-icon teal"><BellRing size={20} className="lucide lucide-bell-ring mt-2.5 mb-2.5 ml-2.5" /></span>
             <div>
               <strong>Period reminders</strong>
               <span>Notify me 3 days before</span>

@@ -18,7 +18,7 @@ export default function Profile() {
       </section>
 
       <section className="profile-highlight health-card">
-        <span className="highlight-icon mt-0 mb-0 text-center pt-[3px] pb-[3px]"><HeartHandshake size={23} className="lucide lucide-heart-handshake lucide lucide-heart-handshake pt-0 pb-0 mt-[7px] mb-[7px]" /></span>
+        <span className="highlight-icon mt-0 mb-0 ml-2.5 text-center pt-[3px] pb-[3px]"><HeartHandshake size={23} className="lucide lucide-heart-handshake lucide lucide-heart-handshake pt-0 pb-0 mt-[7px] mb-[7px]" /></span>
         <div>
           <strong>Your Better Day streak</strong>
           <span>7 days of mindful check-ins</span>
