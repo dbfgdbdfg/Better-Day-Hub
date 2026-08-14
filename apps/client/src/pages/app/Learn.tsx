@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { ArrowRight, BookHeart, ChevronDown, Clock3, HeartPulse, Leaf, ShieldCheck, Sparkles, Stethoscope } from "lucide-react";
+import { ArrowRight, BookHeart, ChevronDown, Clock3, HeartPulse, Leaf, ShieldCheck, Sparkles, Stethoscope, MessageCircle } from "lucide-react";
 import { SectionTitle } from "@/components/app/Ui";
+
 const topics = [{
   label: "Periods 101",
   icon: BookHeart,
@@ -18,6 +19,7 @@ const topics = [{
   icon: Stethoscope,
   tone: "blue"
 }];
+
 const faqs = [{
   question: "When are period cramps considered unusual?",
   answer: "Pain that is suddenly severe, repeatedly interrupts daily life, or comes with fainting, fever, or very heavy bleeding deserves medical attention."
@@ -25,16 +27,19 @@ const faqs = [{
   question: "Can bloating change during my cycle?",
   answer: "Yes. Hormonal changes can influence fluid retention and digestion. Tracking patterns can help you anticipate and discuss recurring symptoms."
 }];
+
 export default function Learn() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  return <div className="page-stack learn-page">
+  
+  return (
+    <div className="page-stack learn-page">
       <section className="learn-feature">
         <div className="learn-feature-icon">
           <Sparkles size={24} />
         </div>
         <span className="feature-label">Medicine guide</span>
-        <h2>AboutEZN6 Eve</h2>
-        <p>Ibuprofen + PamabromLiquid-filled soft capsule,Fast onset relief for menstrual pain & hepls reduce bloating</p>
+        <h2>About EZN6 Eve</h2>
+        <p>Ibuprofen + Pamabrom Liquid-filled soft capsule, Fast onset relief for menstrual pain & hepls reduce bloating</p>
         <div className="article-meta">
           <span>2 min read</span>
           <span><ShieldCheck size={14} /> Clinically reviewed</span>
@@ -47,14 +52,12 @@ export default function Learn() {
       <section>
         <SectionTitle title="Browse by topic" />
         <div className="topic-grid">
-          {topics.map(({
-          label,
-          icon: Icon,
-          tone
-        }) => <button className="topic-tile" key={label}>
+          {topics.map(({ label, icon: Icon, tone }) => (
+            <button className="topic-tile" key={label}>
               <span className={`topic-icon ${tone}`}><Icon size={21} /></span>
               <strong>{label}</strong>
-            </button>)}
+            </button>
+          ))}
         </div>
       </section>
 
@@ -90,39 +93,89 @@ export default function Learn() {
         </div>
       </section>
 
-      <section className="otc-guide health-card">
-        <div className="otc-heading">
-          <span className="brand-mark large">E</span>
-          <div>
-            <span className="article-category">OTC relief guide</span>
-            <h3>Choosing an option that fits your symptoms</h3>
-          </div>
+      {/* 새롭게 교체된 Community Talk 섹션 */}
+      <section>
+        <SectionTitle title="Community talk" action="Enter" />
+        <div className="community-board health-card" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          
+          <article className="community-post">
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#666', marginBottom: '4px' }}>
+              <span className="article-category">Symptoms</span>
+              <span>2h ago</span>
+            </div>
+            <h4 style={{ margin: '4px 0', fontSize: '15px' }}>Does anyone else get insanely exhausted 2 days before? 😴</h4>
+            <p style={{ margin: '0 0 8px', fontSize: '13px', color: '#555', lineHeight: '1.4' }}>
+              I literally can't keep my eyes open at work today. What are your tips for fighting pre-period fatigue?
+            </p>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', fontSize: '12px', fontWeight: '500' }}>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#888' }}>
+                <MessageCircle size={14} /> 14 replies
+              </span>
+              <span style={{ color: '#aaa' }}>·</span>
+              <span style={{ color: '#888' }}>by sleepy_koala</span>
+            </div>
+          </article>
+
+          <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '0' }} />
+
+          <article className="community-post">
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#666', marginBottom: '4px' }}>
+              <span className="article-category">Products</span>
+              <span>5h ago</span>
+            </div>
+            <h4 style={{ margin: '4px 0', fontSize: '15px' }}>Thinking about switching to a menstrual cup... advice?</h4>
+            <p style={{ margin: '0 0 8px', fontSize: '13px', color: '#555', lineHeight: '1.4' }}>
+              I'm a bit nervous about leaks. For those who switched, how long did it take to get used to it?
+            </p>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', fontSize: '12px', fontWeight: '500' }}>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#888' }}>
+                <MessageCircle size={14} /> 32 replies
+              </span>
+              <span style={{ color: '#aaa' }}>·</span>
+              <span style={{ color: '#888' }}>by eco_friendly99</span>
+            </div>
+          </article>
+
+          <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '0' }} />
+
+          <article className="community-post">
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#666', marginBottom: '4px' }}>
+              <span className="article-category">Diet & Cravings</span>
+              <span>1d ago</span>
+            </div>
+            <h4 style={{ margin: '4px 0', fontSize: '15px' }}>Best teas for bloating? I feel like a balloon today 🎈</h4>
+            <p style={{ margin: '0 0 8px', fontSize: '13px', color: '#555', lineHeight: '1.4' }}>
+              Peppermint usually works for me, but it's not cutting it this cycle. Any secret recipes?
+            </p>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', fontSize: '12px', fontWeight: '500' }}>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#888' }}>
+                <MessageCircle size={14} /> 8 replies
+              </span>
+              <span style={{ color: '#aaa' }}>·</span>
+              <span style={{ color: '#888' }}>by matchamaker</span>
+            </div>
+          </article>
+          
+          <button className="outline-button" style={{ marginTop: '4px', width: '100%', justifyContent: 'center' }}>
+            See all discussions <ArrowRight size={15} />
+          </button>
         </div>
-        <p>
-          EZN6 Eve is one over-the-counter option designed for menstrual pain
-          and bloating. Compare active ingredients, suitability, and label
-          directions before choosing any product.
-        </p>
-        <button className="outline-button">
-          Compare relief options <ArrowRight size={15} />
-        </button>
-        <span className="safety-copy">
-          Educational content only. Ask a pharmacist if you are unsure what is
-          right for you.
-        </span>
       </section>
 
       <section>
         <SectionTitle title="Frequently asked" />
         <div className="faq-list health-card">
-          {faqs.map((faq, index) => <div className="faq-item" key={faq.question}>
+          {faqs.map((faq, index) => (
+            <div className="faq-item" key={faq.question}>
               <button onClick={() => setOpenFaq(openFaq === index ? null : index)}>
                 <span>{faq.question}</span>
                 <ChevronDown size={18} className={openFaq === index ? "rotate" : ""} />
               </button>
               {openFaq === index ? <p>{faq.answer}</p> : null}
-            </div>)}
+            </div>
+          ))}
         </div>
       </section>
-    </div>;
+    </div>
+  );
 }
