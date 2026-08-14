@@ -98,15 +98,15 @@ export default function Learn() {
         <SectionTitle title="Community talk" action="Enter" />
         <div className="community-board health-card" style={{ display: 'flex', flexDirection: 'column', gap: '16px', padding: '20px' }}> 
           <article className="community-post">
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#666', marginBottom: '4px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '9px', color: '#666', marginBottom: '4px' }}>
               <span className="article-category">Symptoms</span>
-              <span>2h ago</span>
+              <span>2m ago</span>
             </div>
-            <h4 style={{ margin: '4px 0', fontSize: '15px' }}>Does anyone else get insanely exhausted 2 days before? 😴</h4>
-            <p style={{ margin: '0 0 8px', fontSize: '13px', color: '#555', lineHeight: '1.4' }}>
+            <h4 style={{ margin: '4px 0', fontSize: '12px' }}>Does anyone else get insanely exhausted 2 days before? 😴</h4>
+            <p style={{ margin: '0 0 8px', fontSize: '10px', color: '#555', lineHeight: '1.4' }}>
               I literally can't keep my eyes open at work today. What are your tips for fighting pre-period fatigue?
             </p>
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', fontSize: '12px', fontWeight: '500' }}>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', fontSize: '9px', fontWeight: '500' }}>
               <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#888' }}>
                 <MessageCircle size={14} /> 14 replies
               </span>
@@ -118,15 +118,15 @@ export default function Learn() {
           <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '0' }} />
 
           <article className="community-post">
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#666', marginBottom: '4px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '9px', color: '#666', marginBottom: '4px' }}>
               <span className="article-category">Products</span>
-              <span>5h ago</span>
+              <span>15m ago</span>
             </div>
-            <h4 style={{ margin: '4px 0', fontSize: '15px' }}>Thinking about switching to a menstrual cup... advice?</h4>
-            <p style={{ margin: '0 0 8px', fontSize: '13px', color: '#555', lineHeight: '1.4' }}>
+            <h4 style={{ margin: '4px 0', fontSize: '12px' }}>Thinking about switching to a menstrual cup... advice?</h4>
+            <p style={{ margin: '0 0 8px', fontSize: '10px', color: '#555', lineHeight: '1.4' }}>
               I'm a bit nervous about leaks. For those who switched, how long did it take to get used to it?
             </p>
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', fontSize: '12px', fontWeight: '500' }}>
+            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', fontSize: '9px', fontWeight: '500' }}>
               <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#888' }}>
                 <MessageCircle size={14} /> 32 replies
               </span>
