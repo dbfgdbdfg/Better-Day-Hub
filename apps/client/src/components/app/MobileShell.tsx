@@ -17,7 +17,7 @@ const navigation = [
 ];
 
 const routeTitles: Record<string, { eyebrow: string; title: string }> = {
-  "/": { eyebrow: "Sunday, 9 August", title: "Good morning, Maya" },
+  "/": { eyebrow: "Thursday, 20 August", title: "Good afternoon, Maya" },
   "/track": { eyebrow: "Cycle day 23", title: "Your cycle" },
   "/learn": { eyebrow: "Better health library", title: "Learn with confidence" },
   "/store": { eyebrow: "Better Day Points", title: "Find relief nearby" },

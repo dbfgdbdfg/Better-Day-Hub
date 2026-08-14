@@ -6,9 +6,9 @@ const calendarDays = Array.from({
   length: 35
 }, (_, index) => index - 2);
 export default function Track() {
-  const [selectedDay, setSelectedDay] = useState(9);
+  const [selectedDay, setSelectedDay] = useState(20);
   const [reminders, setReminders] = useState(true);
-  const dayLabel = useMemo(() => selectedDay === 9 ? "Today, August 9" : `August ${selectedDay}`, [selectedDay]);
+  const dayLabel = useMemo(() => selectedDay === 20 ? "Today, August 20" : `August ${selectedDay}`, [selectedDay]);
   return <div className="page-stack track-page">
       <section className="cycle-summary">
         <div className="cycle-ring">
