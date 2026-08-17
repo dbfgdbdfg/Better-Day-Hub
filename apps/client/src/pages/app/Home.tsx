@@ -39,7 +39,7 @@ export default function Home() {
             EZN6 Eve
           </span>
           <h2>
-            Fast Onset.
+            Fast Relif.
             <br />
             Less Bloating.
             <br />
