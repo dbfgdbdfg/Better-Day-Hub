@@ -30,7 +30,7 @@ export default function Track() {
           <span className="status-chip">Luteal phase</span>
           <h2>5 days until your period</h2>
           <p>Your recent cycles range from 27–29 days.</p>
-          <h3 style="color: #ff8fb1;">You have 1 painkiller left</h3>
+          <h3 class="painkiller-text">You have 1 painkiller left</h3>
         </div>
       </section>
 

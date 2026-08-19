@@ -1739,3 +1739,8 @@ button.setting-row { cursor: pointer; }
     transition-duration: 0.01ms !important;
   }
 }
+
+
+.painkiller-text {
+    color: #f19a80;
+}
